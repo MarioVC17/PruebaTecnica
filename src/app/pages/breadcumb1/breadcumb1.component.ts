@@ -10,6 +10,9 @@ export class Breadcumb1Component implements OnInit {
 
   constructor( private router:Router) { }
 
+  imagenes = [
+    "../../../assets/image1.jpg" , "../../../assets/image2.jpg" , "../../../assets/image3.jpg"
+  ]
   ngOnInit(): void {
   }
 

@@ -14,23 +14,11 @@
 
 <div class="container">
 
-  <div class="tajeta">
-    <img src="../../../assets/image1.jpg" alt="">
-    <h1>Anime</h1>
+  <div class="tarjeta" *ngFor="let image of imagenes">
+    <img src="{{image}}" alt="">
+    <h4>Anime</h4>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quidem sed consequuntur officiis blanditiis quo cumque optio atque porro magni quae et reprehenderit odio consectetur laboriosam commodi fuga, quasi aspernatur?</p>
-    <a href="">Leer mas</a>
-
-  </div>
-
-  <div class="tajeta" >
-    <img src="../../../assets/image2.jpg" alt="">
-    <h1>Anime 2</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis culpa nesciunt maxime, perferendis quos velit inventore commodi aliquam corporis exercitationem sequi quam quae excepturi omnis consequatur, autem cum explicabo. Accusantium!</p>
-    <a href="">Leer mas</a>
-
-  </div>
-
-  <div class="tajeta" >
+    <a (click)="ver()">Leer mas</a>
 
   </div>
 

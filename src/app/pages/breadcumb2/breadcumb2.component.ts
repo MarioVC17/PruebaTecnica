@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{ Router } from '@angular/router';
 
 @Component({
   selector: 'app-breadcumb2',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Breadcumb2Component implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
+
+  imagenes = [
+    "../../../assets/image4.jpg" , "../../../assets/image5.jpg" , "../../../assets/image6.jpg"
+  ]
 
   ngOnInit(): void {
   }
 
+  verDescripcion(){
+    this.router.navigateByUrl('/description');
+  }
+
+
 }
+

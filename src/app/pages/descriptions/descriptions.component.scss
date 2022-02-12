@@ -15,7 +15,7 @@ body{
     margin-right: 8%;
     display: grid;
     gap: 10px;
-    grid-template-areas: 
+    grid-template-areas:
         "img"
         "main";
 }
@@ -26,20 +26,20 @@ body{
 }
 
 .slidebar img {
-    width: 50%;
+    width: 100%;
     height: 100%;
 }
 
 .main {
     grid-area: main;
-    background-color: antiquewhite;
+    background-color: #f1f1f0;
 }
 
 @media (min-width: 600px) {
     .container-description{
         grid-template:
-        "img" 400px / 500px
-        "main" 400px 
+        "img" 200px / 300px
+        "main" 400px
         / 500px ;
     }
 }
@@ -47,7 +47,7 @@ body{
 @media (min-width: 900px) {
     .container-description{
         grid-template:
-        "img main " 400px / 500px
+        "img main " 400px / 350px
          ;
     }
 }
