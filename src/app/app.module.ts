@@ -9,6 +9,8 @@ import { DescriptionsComponent } from './pages/descriptions/descriptions.compone
 import { HeaderComponent } from './pages/header/header.component';
 import { NexDirective } from './nex.directive';
 import { PrevDirective } from './prev.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -18,11 +20,12 @@ import { PrevDirective } from './prev.directive';
     DescriptionsComponent,
     HeaderComponent,
     NexDirective,
-    PrevDirective
+    PrevDirective,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

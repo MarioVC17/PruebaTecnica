@@ -14,20 +14,27 @@ export class Breadcumb1Component implements OnInit {
   imagenes = [
     {
       "imagen":"../../../assets/image1.jpg",
-      "anime":"kimetsu"
+      "anime":"kimetsu",
+      "introduccion":"Anime de kimetsu"
     },
 
     {
       "imagen":"../../../assets/image2.jpg",
-      "anime":"jujutsu"
+      "anime":"jujutsu",
+      "introduccion":"Anime de jujutsu"
     },
 
     {
       "imagen":"../../../assets/image3.jpg",
-      "anime":"atack"
+      "anime":"atack",
+      "introduccion":"Anime de atack"
     }
 
   ]
+
+
+
+
   ngOnInit(): void {
   }
 

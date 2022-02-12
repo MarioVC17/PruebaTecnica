@@ -16,8 +16,8 @@
 
   <div class="tarjeta" *ngFor="let image of imagenes">
     <img src="{{image.imagen}}" alt="">
-    <h4>Anime</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quidem sed consequuntur officiis blanditiis quo cumque optio atque porro magni quae et reprehenderit odio consectetur laboriosam commodi fuga, quasi aspernatur?</p>
+    <h4>{{image.anime}}</h4>
+    <p>{{image.introduccion}}</p>
     <a (click)="ver(image.anime)">Leer mas</a>
 
   </div>
