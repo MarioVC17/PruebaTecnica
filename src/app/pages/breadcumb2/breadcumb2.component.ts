@@ -25,11 +25,6 @@ export class Breadcumb2Component implements OnInit {
     {
       "imagen":"../../../assets/image3.jpg",
       "anime":"atack"
-    },
-
-    {
-      "imagen":"../../../assets/image7.jpg",
-      "anime":"one"
     }
 
   ]
@@ -37,9 +32,9 @@ export class Breadcumb2Component implements OnInit {
   ngOnInit(): void {
   }
 
-  verDescripcion(anime:string){
+  verDescripcion(anime:string, catologo:string,imagen:string){
     this.router.navigateByUrl('/description');
-    this.service.enviar(anime);
+    this.service.enviar(anime,catologo,imagen);
   }
 
 

@@ -11,24 +11,28 @@ export class ServicesService {
     atack: "La historia nos traslada a un mundo en el que la humanidad estuvo a punto de ser exterminada cientos de años atrás por los gigantes. Los gigantes son enormes, parecen no ser inteligentes y devoran seres humanos. Lo peor es que parece que lo hacen por placer y no por alimentarse. Una pequeña parte de la humanidad ha conseguido sobrevivir protegiéndose en una ciudad con unos altísimos muros, más altos que el mayor de los gigantes. La ciudad vive su vida tranquila, y hace más de 100 años que ningún gigante aparece por allí. Eren y su hermana adoptiva Mikasa son todavía unos adolescentes cuando ven algo horroroso: un gigante mucho mayor que todos los que la humanidad había conocido hasta el momento está destruyendo los muros de la ciudad. No pasa mucho tiempo hasta que los gigantes entran por el hueco abierto en el muro y comienzan a devorar a la gente."
   }
 
+  catologo ="";
 
   descripcion = "";
 
   nombre = "";
+  img="";
 
   constructor() { }
 
 
 
-  enviar(nombre:string){
+  enviar(nombre:string , catologo:string,imagen:string){
     this.nombre=nombre;
-    if(this.nombre=="kimetsu"){
+    this.catologo=catologo;
+    this.img = imagen;
+    if(this.nombre=="Kimetsu no yaiba"){
       this.descripcion=this.descripciones.kimetsu;
     }
-    else if(this.nombre=="jujutsu"){
+    else if(this.nombre=="Jujutsu kaisen"){
       this.descripcion=this.descripciones.jujutsu;
     }
-    else if(this.nombre=="atack"){
+    else if(this.nombre=="Shingeki no kyojin"){
       this.descripcion=this.descripciones.atack;
     }
   }
@@ -37,7 +41,9 @@ export class ServicesService {
     return [
       {
         anime:this.nombre,
-        descripcion:this.descripcion
+        descripcion:this.descripcion,
+        catologo:this.catologo,
+        imagen:this.img
       }
     ];
 

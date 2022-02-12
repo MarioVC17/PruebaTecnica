@@ -37,18 +37,20 @@ html , body {
 }
 
 .container .tarjeta img{
-  width: 320px;
-  height: 320px;
+  width: 250px;
+  height: 350px;
 }
 
-.container .tarjeta h4 {
-  font-weight: 600;
+.container .tarjeta h1 {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 4%;
 }
 
 .container .tarjeta p{
-  padding: 0;
-  font-size: 16px;
-  font-weight: 300;
+  width: 80%;
+  margin: auto;
+  text-align: justify;
 }
 
 .container .tarjeta a{
