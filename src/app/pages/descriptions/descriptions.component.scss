@@ -1,0 +1,53 @@
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+}
+
+.col-md5{
+    margin-left: 8%;
+}
+
+.container-description{
+    margin-left: 8%;
+    margin-right: 8%;
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+        "img"
+        "main";
+}
+
+.slidebar {
+    grid-area: img;
+    background-color: #000;
+}
+
+.slidebar img {
+    width: 50%;
+    height: 100%;
+}
+
+.main {
+    grid-area: main;
+    background-color: antiquewhite;
+}
+
+@media (min-width: 600px) {
+    .container-description{
+        grid-template:
+        "img" 400px / 500px
+        "main" 400px 
+        / 500px ;
+    }
+}
+
+@media (min-width: 900px) {
+    .container-description{
+        grid-template:
+        "img main " 400px / 500px
+         ;
+    }
+}
