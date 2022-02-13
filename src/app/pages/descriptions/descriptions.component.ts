@@ -11,11 +11,28 @@ export class DescriptionsComponent implements OnInit {
 
   constructor(private router:Router , private service:ServicesService) { }
 
+  imagenes = [
+    {
+      "imagen":"../../../assets/image1.jpg",
+      "anime":"kimetsu"
+    },
 
+    {
+      "imagen":"../../../assets/image2.jpg",
+      "anime":"jujutsu"
+    },
+
+    {
+      "imagen":"../../../assets/image3.jpg",
+      "anime":"atack"
+    }
+
+  ]
 
   anime = "";
-
   descripcion = "";
+  catologo = "";
+  img = "";
 
   ngOnInit(): void {
     this.mostrarDescripcion();
@@ -29,6 +46,8 @@ export class DescriptionsComponent implements OnInit {
     let data=this.service.devolver();
     this.anime=data[0]["anime"];
     this.descripcion=data[0]["descripcion"];
+    this.catologo=data[0]["catologo"];
+    this.img=data[0]["imagen"];
 
   }
 }

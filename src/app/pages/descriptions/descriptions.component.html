@@ -3,14 +3,15 @@
 
 <div class="col-md5">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a (click)='verCatalogo()'>Catologo 1</a></li>
+        <li *ngIf="catologo=='uno'"class="breadcrumb-item"><a (click)='verCatalogo()'>Catologo 1</a></li>
+        <li *ngIf="catologo=='dos'"class="breadcrumb-item"><a (click)='verCatalogo()'>Catologo 2</a></li>
         <li class="breadcrumb-item active" aria-current="page">Descripcion</li>
     </ol>
 </div>
 
 <div class="container-description">
     <div class="slidebar">
-        <img src="../../../assets/image1.jpg" alt="">
+        <img src="{{img}}" alt="">
     </div>
     <article class="main">
       <h1>{{anime}}</h1>
