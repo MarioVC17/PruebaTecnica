@@ -5,6 +5,7 @@ import { Breadcumb2Component } from '../app/pages/breadcumb2/breadcumb2.componen
 import { DescriptionsComponent } from '../app/pages/descriptions/descriptions.component';
 
 const routes: Routes = [
+  { path: '', component:Breadcumb1Component} ,
   { path: 'breadcumb1', component:Breadcumb1Component} ,
   { path: 'breadcumb2' , component:Breadcumb2Component},
   { path: 'description' , component:DescriptionsComponent}
