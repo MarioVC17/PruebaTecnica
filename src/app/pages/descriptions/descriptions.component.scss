@@ -1,53 +1,88 @@
+// ***** DISEÑO DE PAGINA HTML *****
 html{
     height: 100%;
 }
 
+
+// ***** DISEÑO DEl BODY DE LA PAGINA HTML *****
 body{
     min-height: 100%;
 }
 
+// ***** DISEÑO DEl BREADCUMB *****
 .col-md5{
     margin-left: 8%;
 }
 
+
+// ***** DISEÑO DEL CONTENEDOR DE LAS DESCRIPCIONES *****
 .container-description{
     margin-left: 8%;
     margin-right: 8%;
     display: grid;
     gap: 10px;
-    grid-template-areas: 
+    grid-template-areas:
         "img"
         "main";
 }
 
+
+// ***** AQUI SE LA ASIGNA UN AREA AL DIV "SLIDERBAR" QUE ES DONDE LA IMAGEN *****
 .slidebar {
     grid-area: img;
     background-color: #000;
 }
 
+
+// ***** DIMENCIONES DE LA IMAGEN DE LA DESCRIPCION *****
 .slidebar img {
-    width: 50%;
+    width: 100%;
     height: 100%;
 }
 
+
+// ***** AQUI SE LA ASIGNA UN AREA AL DIV "MAIN" QUE ES DONDE VA EL TEXTO DE CADA DESCRIPCION *****
 .main {
     grid-area: main;
-    background-color: antiquewhite;
+    background-color: #f1f1f0;
 }
 
+
+// ***** DISEÑO DEL TITULO DE LA DESCRIPCION *****
+.main h1 {
+  margin: 4%;
+}
+
+
+// ***** DISEÑO DEL SUBTITULO DE LA DESCRIPCION *****
+.main h3{
+  margin: 4%;
+}
+
+
+// ***** DISEÑO DEL TEXTO DE LA DESCRIPCION *****
+.main p {
+  margin: 4%;
+  text-align: justify;
+}
+
+
+// ***** AQUI LO QUE HACE ES ASIGANARLE UN TAMAÑO Y UN AREA CUANDO LA PAGINA ESTA EN UN DIMENSION 600PX *****
 @media (min-width: 600px) {
     .container-description{
         grid-template:
-        "img" 400px / 500px
-        "main" 400px 
+        "img" 200px / 300px
+        "main" 400px
         / 500px ;
     }
 }
 
+
+// ***** AQUI LO QUE HACE ES ASIGANARLE UN TAMAÑO Y UN AREA CUANDO LA PAGINA ESTA EN UN DIMENSION 900PX *****
 @media (min-width: 900px) {
     .container-description{
         grid-template:
-        "img main " 400px / 500px
+        "img main " 400px / 350px
          ;
     }
 }

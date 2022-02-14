@@ -1,22 +1,36 @@
+<!-- ********************** HEADER ********************** -->
 <app-header></app-header>
 
 <br>
 
+
+<!-- ********************** BREADCUM ********************** -->
 <div class="col-md5">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Catologo 1</a></li>
+
+        <!-- LA FUNCION ngIf QUE SE ENCUENTRA DENTRO LA ETIQUETA LI LO QUE HACE ES LO SIGUIENTE:
+        SI SE SELECCIONA CATOLOGO 2 , EL BREADCUMB MOSTRARA "Catologo 2"
+        Y SI SELECCIONA CATOLOGGO 1 , EL BREADCUMB MOSTRATA "Catologo 1" -->
+        <li *ngIf="catologo=='uno'"class="breadcrumb-item"><a (click)='verCatalogo()'>Catologo 1</a></li>
+        <li *ngIf="catologo=='dos'"class="breadcrumb-item"><a (click)='verCatalogo()'>Catologo 2</a></li>
         <li class="breadcrumb-item active" aria-current="page">Descripcion</li>
     </ol>
 </div>
 
-<body>
-    
-    <div class="container-description">
-        <aside class="slidebar">Aside
-            <img src="../../../assets/image1.jpg" alt="">
-        </aside>
-        <article class="main">Main</article>
+
+<!-- ********************** CONTENEDOR DE LAS DESCRIPCIONES ********************** -->
+<div class="container-description">
+
+
+    <!-- ********************** IMAGEN DE LA DESCRIPCION ********************** -->
+    <div class="slidebar">
+        <img src="{{img}}" alt="">
     </div>
 
-    
-</body>
+    <!-- ********************** TEXTO DE LA DESCRIPCION ********************** -->
+    <article class="main">
+      <h1>{{anime}}</h1>
+      <h3>Sipnosis</h3>
+      <p>{{descripcion}}</p>
+    </article>
+</div>

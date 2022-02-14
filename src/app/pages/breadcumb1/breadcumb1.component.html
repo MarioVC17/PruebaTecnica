@@ -1,51 +1,37 @@
+<!-- ********************** HEADER ********************** -->
 <app-header></app-header>
 
-<br> 
+<br>
 
-<div class="col-md5"> 
+
+<!-- ********************** BREADCUMB ********************** -->
+<div class="col-md5">
     <ol class="breadcrumb">
         <li class="breadcrumb-item active" aria-current="page">Catalogo 1</li>
     </ol>
 </div>
 
+
+<!-- ********************** TITULO CATOLOGO 1 ********************** -->
 <h1 class="title-catologo1">Animes</h1>
 
 <br>
 
-<body>
-    
-    <div class="content-card">
-        <div class="card">
-            <img src="../../../assets/image1.jpg" alt="">
-            <div class="description">
-                <h1>Title</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, minima non esse suscipit officia mollitia quae iure. Voluptatem eligendi, temporibus ab, numquam perferendis quibusdam laboriosam illum maiores a nam fugiat!</p>
-                <a href="#" class="btn"> Ver </a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="content-card">
-        <div class="card">
-            <img src="../../../assets/image2.jpg" alt="">
-            <div class="description">
-                <h1>Title</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, minima non esse suscipit officia mollitia quae iure. Voluptatem eligendi, temporibus ab, numquam perferendis quibusdam laboriosam illum maiores a nam fugiat!</p>
-                <a href="#" class="btn"> Ver </a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="content-card">
-        <div class="card">
-            <img src="../../../assets/image3.jpg" alt="">
-            <div class="description">
-                <h1>Title</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, minima non esse suscipit officia mollitia quae iure. Voluptatem eligendi, temporibus ab, numquam perferendis quibusdam laboriosam illum maiores a nam fugiat!</p>
-                <a href="#" class="btn"> Ver </a>
-            </div>
-        </div>
-    </div>
 
-</body>
+<!-- ********************** CONTENEDOR DE CARDS ********************** -->
+
+<div class="container">
+
+  <!-- ********************** CARDS ********************** -->
+
+  <div class="tarjeta" *ngFor="let image of imagenes">
+    <img src="{{image.imagen}}" alt="">
+    <h2>{{image.anime}}</h2>
+    <p>{{image.introduccion}}</p>
+    <a (click)="ver(image.anime,'uno',image.imagen)">Leer mas</a>
+  </div>
+
+  <br>
+
+</div>
 
